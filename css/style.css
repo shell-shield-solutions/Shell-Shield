@@ -1,43 +1,170 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap");
 * {
+  box-sizing: border-box;
+  list-style: none;
   margin: 0;
   padding: 0;
 }
 
 body {
-  -webkit-animation: gradient 10s linear infinite;
-          animation: gradient 10s linear infinite;
-  -webkit-animation-direction: alternate;
-          animation-direction: alternate;
-  background: linear-gradient(45deg, hsla(0deg, 100%, 50%, 0.5), hsla(39deg, 100%, 50%, 0.5), hsla(60deg, 100%, 50%, 0.5), hsla(120deg, 100%, 25%, 0.5));
-  background-size: 500% 100%;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1em;
+  font-weight: 500;
+}
+body a {
+  display: inline-block;
+}
+body span {
+  display: inline-block;
+}
+body .btn.solid {
+  border-radius: 100vmax;
+  color: #F2F2F2;
+  font-weight: 600;
+  padding: 8px 24px;
+  transition: 0.125s linear;
+  cursor: pointer;
+}
+body .btn.solid.red {
+  background-color: #FF6961;
+}
+body .btn.solid.red:hover {
+  color: #FF6961;
+}
+body .btn.solid:hover {
+  background: none;
+  outline: 2px solid #FF6961;
+  outline-offset: -2px;
 }
 
-#site-wrapper {
+#header {
+  align-items: center;
+  background-color: #495B73;
+  display: flex;
+  font-size: 1em;
+  justify-content: space-between;
+  padding: 0 24px;
+  width: 100%;
+}
+#header a {
+  text-decoration: none;
+}
+#header #logo-block #header-logo {
+  align-items: center;
+  color: #F2F2F2;
+  display: flex;
+  font-weight: 600;
+  vertical-align: middle;
+}
+#header #logo-block #header-logo .logo {
+  background-color: #F2F2F2;
+  display: inline-block;
+  height: 24px;
+  -webkit-mask: url("/assets/icon/header-logo.svg") center no-repeat;
+          mask: url("/assets/icon/header-logo.svg") center no-repeat;
+  -webkit-mask-size: 100%;
+          mask-size: 100%;
+  margin-right: 12px;
+  width: 51px;
+}
+#header #nav-block #navigation {
   align-items: center;
   display: flex;
-  height: 100vh;
-  justify-content: center;
 }
-#site-wrapper h1 {
-  font-family: "Nunito Sans", sans-serif;
-  font-size: 2.5em;
+#header #nav-block #navigation > :last-child {
+  margin-left: 12px;
+}
+#header #nav-block #navigation a:not(.btn) {
+  color: #F2F2F2;
+  padding: 18px 24px;
+}
+#header #nav-block #navigation .drawer:hover {
+  background-color: #586F8C;
+}
+#header #nav-block #navigation .drawer:hover .dropdown {
+  background-color: #586F8C;
+  font-size: 0.875em;
+}
+#header #nav-block #navigation .drawer:hover .dropdown a:hover {
+  background-color: #6A85A4;
+}
+#header #nav-block #navigation .dropdown {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  padding-bottom: 8px;
+}
+#header #nav-block #navigation .dropdown a {
+  padding: 8px 24px;
+  width: 100%;
+}
+#header #nav-block #navigation .drawer:hover .dropdown {
+  display: block;
+}
+@media (max-width: 829px) {
+  #header #nav-block #navigation {
+    display: none;
+  }
+}
+#header #nav-block #mobile-nav {
+  background-color: #F2F2F2;
+  border: none;
+  display: none;
+  height: 16px;
+  -webkit-mask: url("/assets/icon/hamburger-menu.svg");
+          mask: url("/assets/icon/hamburger-menu.svg");
+  -webkit-mask-size: 100%;
+          mask-size: 100%;
+  transition: 0.125s linear;
+  width: 24px;
+}
+@media (max-width: 829px) {
+  #header #nav-block #mobile-nav {
+    display: block;
+  }
+}
+#header #nav-block #mobile-nav:hover {
+  cursor: pointer;
+  transform: scale(1.125);
+}
+@media (max-width: 829px) {
+  #header {
+    height: 58.5px;
+  }
 }
 
-@-webkit-keyframes gradient {
-  0% {
-    background-position: 0%;
-  }
-  100% {
-    background-position: 100%;
-  }
+#hero {
+  background-color: #F2F2F2;
+  height: 100px;
 }
 
-@keyframes gradient {
-  0% {
-    background-position: 0%;
-  }
-  100% {
-    background-position: 100%;
-  }
+#footer {
+  background-color: #495B73;
+  color: #F2F2F2;
+  padding: 24px 36px;
+}
+#footer #breadcrumbs > * + * {
+  margin-left: 32px;
+}
+#footer #breadcrumbs {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  max-width: 934px;
+}
+#footer #breadcrumbs > div p {
+  font-size: 0.875em;
+  font-weight: 600;
+  padding-bottom: 6px;
+}
+#footer #breadcrumbs > div a {
+  color: #F2F2F2;
+  font-size: 0.75em;
+  text-decoration: none;
+}
+#footer #breadcrumbs > div a:hover {
+  text-decoration: underline;
+}
+#footer #breadcrumbs > div > a {
+  padding-top: 6px;
 }/*# sourceMappingURL=style.css.map */
