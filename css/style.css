@@ -60,8 +60,10 @@ body .btn.solid:hover {
   background-color: #F2F2F2;
   display: inline-block;
   height: 24px;
-  -webkit-mask: url("/assets/icon/header-logo.svg") center no-repeat;
-          mask: url("/assets/icon/header-logo.svg") center no-repeat;
+/*   -webkit-mask: url("/assets/icon/header-logo.svg") center no-repeat; */
+          mask-image: url("/assets/icon/header-logo.svg");
+          mask-position: center;
+          mask-repeat: no-repeat;
   -webkit-mask-size: 100%;
           mask-size: 100%;
   margin-right: 12px;
