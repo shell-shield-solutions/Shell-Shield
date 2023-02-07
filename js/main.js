@@ -1,1 +1,5 @@
-console.log('Hello World!')
+import loadComponents from './loader.js'
+
+window.onload = () => {
+    loadComponents('#header', '/components/header.html')
+}
