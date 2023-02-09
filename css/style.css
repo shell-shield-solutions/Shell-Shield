@@ -57,13 +57,12 @@ body .btn.solid:hover {
   vertical-align: middle;
 }
 #header #logo-block #header-logo .logo {
-  background-color: #F2F2F2;
+  background-image: url("/assets/icon/header-logo.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
   display: inline-block;
   height: 24px;
-  -webkit-mask: url("/assets/icon/header-logo.svg") center no-repeat;
-          mask: url("/assets/icon/header-logo.svg") center no-repeat;
-  -webkit-mask-size: 100%;
-          mask-size: 100%;
   margin-right: 12px;
   width: 51px;
 }
@@ -107,12 +106,14 @@ body .btn.solid:hover {
   }
 }
 #header #nav-block #mobile-nav {
-  background-color: #F2F2F2;
+  background-color: transparent;
+  background-image: url("/assets/icon/hamburger-menu.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 24px 16px;
   border: none;
   display: none;
   height: 16px;
-  -webkit-mask: url("/assets/icon/hamburger-menu.svg");
-          mask: url("/assets/icon/hamburger-menu.svg");
   -webkit-mask-size: 100%;
           mask-size: 100%;
   transition: 0.125s linear;

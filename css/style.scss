@@ -85,11 +85,12 @@ body {
             vertical-align: middle;
 
             .logo {
-                background-color: map-get($colors, light_gray);
+                background-image: url('/assets/icon/header-logo.svg');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: 100%;
                 display: inline-block;
                 height: 24px;
-                mask: url('/assets/icon/header-logo.svg') center no-repeat;
-                mask-size: 100%;
                 margin-right: 12px;
                 width: 51px;
             }
@@ -147,11 +148,14 @@ body {
         }
 
         #mobile-nav {
-            background-color: map-get($colors, light_gray);
+            background-color: transparent;
+            background-image: url('/assets/icon/hamburger-menu.svg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 24px 16px;
             border: none;
             display: none;
             height: 16px;
-            mask: url('/assets/icon/hamburger-menu.svg');
             mask-size: 100%;
             transition: .125s linear;
             width: 24px;
