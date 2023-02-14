@@ -10,7 +10,8 @@ $colors: (
     light_blue_gray: #6A85A4,
     blue_gray: #586F8C,
     dark_blue_gray: #495B73,
-    black: #262625,
+    text: #262625,
+    black-shadow: #27272680,
     dark_gray: #A6A6A6,
     med_gray: #D9D9D8,
     light_gray: #F2F2F2,
@@ -29,12 +30,12 @@ body {
     font-size: 1em;
     font-weight: 500;
 
-    a {
-        display: inline-block;
+    a, span, h1, h2, h3 {
+        display: block;
     }
 
-    span {
-        display: inline-block;
+    a {
+        text-decoration: none;
     }
 
     .btn {
@@ -61,35 +62,51 @@ body {
             }
         }
     }
+
+    .title-band {
+        display: flex;
+        justify-content: center;
+        position: relative;
+
+        h2 {
+            background-color: #FFF;
+            padding: 0 10px;
+            z-index: 2;
+        }
+
+        hr {
+            background-color: map-get($colors, med_gray);
+            border: none;
+            height: 2px;
+            position: absolute;
+            width: calc(100% - 48px);
+            top: calc(50% - 2px);
+            z-index: 1;
+        }
+    }
 }
 
 #header {
     align-items: center;
-    background-color: map-get($colors, dark_blue_gray);
+    border-bottom: 2px solid map-get($colors, med_gray);
     display: flex;
     font-size: 1em;
     justify-content: space-between;
     padding: 0 24px;
     width: 100%;
-    
-    a {
-        text-decoration: none;
-    }
 
     #logo-block {
         #header-logo {
             align-items: center;
-            color: map-get($colors, light_gray);
+            color: map-get($colors, text);
             display: flex;
             font-weight: 600;
-            vertical-align: middle;
 
             .logo {
-                background-image: url('/assets/icon/header-logo.svg');
+                background-image: url('/assets/icon/logo.svg');
                 background-position: center;
                 background-repeat: no-repeat;
                 background-size: 100%;
-                display: inline-block;
                 height: 24px;
                 margin-right: 12px;
                 width: 51px;
@@ -107,30 +124,29 @@ body {
                 }
 
             a:not(.btn) {
-                color: map-get($colors, light_gray);
+                color: map-get($colors, text);
                 padding: 18px 24px;
             }
 
             .drawer {
                 &:hover {
-                    background-color: map-get($colors, blue_gray);
 
                     .dropdown {
-                        background-color: map-get($colors, blue_gray);
                         font-size: 0.875em;
 
                         a:hover {
-                            background-color: map-get($colors, light_blue_gray);
                         }
                     }
                 }
             }
 
             .dropdown {
+                background-color: #FFFFFF;
                 display: none;
                 flex-direction: column;
                 position: absolute;
                 padding-bottom: 8px;
+                z-index: 3;
 
                 a {
                     padding: 8px 24px;
@@ -176,46 +192,79 @@ body {
     }
 }
 
-#hero {
-    background-color: map-get($colors, light_gray);
-    height: 100px;
+#focus {
+    width: 100%;
+    
+    .focus-cards {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px;
+        justify-content: space-around;
+
+        .card {
+            text-align: center;
+            width: 324px;
+
+            .icon {
+                background-color: map-get($colors, med_gray);
+                background-position: center;
+                background-repeat: no-repeat;
+                border-radius: 100vmax;
+                height: 48px;
+                margin: 0 auto 6px;
+                width: 48px;
+                
+                &.network {
+                    background-image: url(/assets/icon/wifi.svg);
+                    background-size: 24px 17px;
+                }
+                
+                &.endpoint {
+                    background-image: url(/assets/icon/laptop.svg);
+                    background-size: 24px 17px;
+                }
+                
+                &.user {
+                    background-image: url(/assets/icon/headshot.svg);
+                    background-size: 16px;
+                }
+            }
+
+            &:hover {
+            }
+        }
+    }
 }
 
 #footer {
-    background-color: map-get($colors, dark_blue_gray);
-    color: map-get($colors, light_gray);
-    padding: 24px 36px;
+    padding: 0px 24px;
 
     #breadcrumbs > * + * {
-        margin-left: 32px;
+        // margin-left: 32px;
     }
 
     #breadcrumbs {
         display: flex;
         flex-direction: row;
+        gap: 0 32px;
+        flex-wrap: wrap;
         margin: 0 auto;
-        max-width: 934px;
-
+        
+        .title {
+            font-size: .875em;
+            font-weight: 600;
+            padding-bottom: 6px;
+        }
+        
+        a, p:not(.title) {
+            color: map-get($colors, text);
+            font-size: .75em;
+            padding-bottom: 4px;
+            text-decoration: none;
+        }
+        
         > div {
-            p {
-                font-size: .875em;
-                font-weight: 600;
-                padding-bottom: 6px;
-            }
 
-            a {
-                color: map-get($colors, light_gray);
-                font-size: .75em;
-                text-decoration: none;
-
-                &:hover {
-                    text-decoration: underline;
-                }
-            }
-
-            > a {
-                padding-top: 6px;
-            }
         }
     }
 }
