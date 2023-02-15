@@ -72,7 +72,7 @@ body .title-band hr {
   font-weight: 600;
 }
 #header #logo-block #header-logo .logo {
-  background-image: url("/assets/icon/logo.svg");
+  background-image: url(/assets/icon/logo.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -116,7 +116,7 @@ body .title-band hr {
 }
 #header #nav-block #mobile-nav {
   background-color: transparent;
-  background-image: url("/assets/icon/hamburger-menu.svg");
+  background-image: url(/assets/icon/menu.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 24px 16px;
@@ -166,24 +166,26 @@ body .title-band hr {
   width: 48px;
 }
 #focus .focus-cards .card .icon.network {
-  background-image: url(/assets/icon/wifi.svg);
+  background-image: url(/assets/icon/wifi.png);
   background-size: 24px 17px;
 }
 #focus .focus-cards .card .icon.endpoint {
-  background-image: url(/assets/icon/laptop.svg);
+  background-image: url(/assets/icon/laptop.png);
   background-size: 24px 17px;
 }
 #focus .focus-cards .card .icon.user {
-  background-image: url(/assets/icon/headshot.svg);
+  background-image: url(/assets/icon/user.png);
   background-size: 16px;
 }
 #footer {
   padding: 0px 24px;
 }
+#footer #breadcrumbs > * + * {
+  margin-left: 32px;
+}
 #footer #breadcrumbs {
   display: flex;
   flex-direction: row;
-  gap: 0 32px;
   flex-wrap: wrap;
   margin: 0 auto;
 }
