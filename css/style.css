@@ -180,12 +180,11 @@ body .title-band hr {
 #footer {
   padding: 0px 24px;
 }
-#footer #breadcrumbs > * + * {
-  margin-left: 32px;
-}
 #footer #breadcrumbs {
   display: flex;
   flex-direction: row;
+  -moz-column-gap: 32px;
+       column-gap: 32px;
   flex-wrap: wrap;
   margin: 0 auto;
 }

@@ -240,13 +240,13 @@ body {
     padding: 0px 24px;
 
     #breadcrumbs > * + * {
-        margin-left: 32px;
+        // margin-left: 32px;
     }
 
     #breadcrumbs {
         display: flex;
         flex-direction: row;
-        // grid-gap: 0 32px;
+        column-gap: 32px;
         flex-wrap: wrap;
         margin: 0 auto;
         
@@ -261,10 +261,6 @@ body {
             font-size: .75em;
             padding-bottom: 4px;
             text-decoration: none;
-        }
-        
-        > div {
-
         }
     }
 }
