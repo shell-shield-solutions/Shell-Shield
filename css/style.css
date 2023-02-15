@@ -72,7 +72,7 @@ body .title-band hr {
   font-weight: 600;
 }
 #header #logo-block #header-logo .logo {
-  background-image: url(/Shell-Shield/assets/icon/logo.png);
+  background-image: url(/Shell-Shield/assets/icon/logo.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -116,7 +116,7 @@ body .title-band hr {
 }
 #header #nav-block #mobile-nav {
   background-color: transparent;
-  background-image: url(/Shell-Shield//assets/icon/menu.png);
+  background-image: url(/Shell-Shield//assets/icon/menu.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 24px 16px;
@@ -166,15 +166,15 @@ body .title-band hr {
   width: 48px;
 }
 #focus .focus-cards .card .icon.network {
-  background-image: url(/Shell-Shield//assets/icon/wifi.png);
+  background-image: url(/Shell-Shield//assets/icon/wifi.svg);
   background-size: 24px 17px;
 }
 #focus .focus-cards .card .icon.endpoint {
-  background-image: url(/Shell-Shield//assets/icon/laptop.png);
+  background-image: url(/Shell-Shield//assets/icon/laptop.svg);
   background-size: 24px 17px;
 }
 #focus .focus-cards .card .icon.user {
-  background-image: url(/Shell-Shield//assets/icon/user.png);
+  background-image: url(/Shell-Shield//assets/icon/user.svg);
   background-size: 16px;
 }
 #footer {
