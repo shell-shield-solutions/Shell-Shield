@@ -103,7 +103,7 @@ body {
             font-weight: 600;
 
             .logo {
-                background-image: url('assets/icon/logo.png');
+                background-image: url(/Shell-Shield/assets/icon/logo.png);
                 background-position: center;
                 background-repeat: no-repeat;
                 background-size: 100%;
@@ -165,7 +165,7 @@ body {
 
         #mobile-nav {
             background-color: transparent;
-            background-image: url(/assets/icon/menu.png);
+            background-image: url(/Shell-Shield//assets/icon/menu.png);
             background-position: center;
             background-repeat: no-repeat;
             background-size: 24px 16px;
@@ -215,17 +215,17 @@ body {
                 width: 48px;
                 
                 &.network {
-                    background-image: url(/assets/icon/wifi.png);
+                    background-image: url(/Shell-Shield//assets/icon/wifi.png);
                     background-size: 24px 17px;
                 }
                 
                 &.endpoint {
-                    background-image: url(/assets/icon/laptop.png);
+                    background-image: url(/Shell-Shield//assets/icon/laptop.png);
                     background-size: 24px 17px;
                 }
                 
                 &.user {
-                    background-image: url(/assets/icon/user.png);
+                    background-image: url(/Shell-Shield//assets/icon/user.png);
                     background-size: 16px;
                 }
             }
