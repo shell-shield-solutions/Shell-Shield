@@ -10,11 +10,16 @@ $colors: (
     light_blue_gray: #6A85A4,
     blue_gray: #586F8C,
     dark_blue_gray: #495B73,
+
     text: #262625,
-    black-shadow: #27272680,
-    dark_gray: #A6A6A6,
-    med_gray: #D9D9D8,
+    
+    dark_gray_shadow: hsla(0, 0%, 65%, 0.5),
+    black_shadow: #27272680,
+    
     light_gray: #F2F2F2,
+    med_gray: #D9D9D8,
+    dark_gray: #A6A6A6,
+    
     accent: #FF6961
 );
 
@@ -40,7 +45,6 @@ body {
 
     .btn {
         &.solid {
-            border-radius: 100vmax;
             color: map-get($colors, light_gray);
             font-weight: 600;
             padding: 8px 24px;
@@ -66,6 +70,7 @@ body {
     .title-band {
         display: flex;
         justify-content: center;
+        padding: 24px 0;
         position: relative;
 
         h2 {
@@ -79,10 +84,17 @@ body {
             border: none;
             height: 2px;
             position: absolute;
-            width: calc(100% - 48px);
+            width: 100%;
             top: calc(50% - 2px);
             z-index: 1;
         }
+    }
+}
+
+#site-wrapper {
+    #main > div {
+        max-width: calc(100vw - 48px);
+        margin: 0 auto 48px;
     }
 }
 
@@ -192,9 +204,14 @@ body {
     }
 }
 
+#hero {
+    .img {
+        background-color: map-get($colors, light_gray);
+        height: 325px;
+    }
+}
+
 #focus {
-    width: 100%;
-    
     .focus-cards {
         display: flex;
         flex-wrap: wrap;
@@ -206,10 +223,11 @@ body {
             width: 324px;
 
             .icon {
-                background-color: map-get($colors, med_gray);
+                background-color: map-get($colors, light_gray);
                 background-position: center;
                 background-repeat: no-repeat;
                 border-radius: 100vmax;
+                box-shadow: 4px 4px 4px map-get($colors, dark_gray_shadow);
                 height: 48px;
                 margin: 0 auto 6px;
                 width: 48px;
@@ -229,8 +247,36 @@ body {
                     background-size: 16px;
                 }
             }
+        }
+    }
+}
 
-            &:hover {
+#insights {
+    .article-tiles {
+        display: grid;
+        gap: 24px;
+        grid-template-columns: repeat(auto-fill, 324px); 
+        justify-content: space-around;
+        padding: 0 24px;
+
+        .tile {
+            .img {
+                background-color: map-get($colors, light_gray);
+                // box-shadow: 4px 4px 4px map-get($colors, dark_gray_shadow);
+                height: 188px;
+            }
+
+            .tag-list {
+                display: inline-flex;
+                flex-wrap: wrap;
+                gap: 6px;
+                padding: 6px 0 4px 0;
+                
+                .tag {
+                    background-color: map-get($colors, light_gray);
+                    font-size: .875em;
+                    padding: 2px 8px;
+                }
             }
         }
     }
