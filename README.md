@@ -7,7 +7,7 @@ ShellShield is designed to provide easy-to-use universal security techniques for
 ShellSheild includes three primary areas of focus:
 - Endpoint Management
 - Network Security
-- Communication Security
+- User Awareness Trainings
 
 These items are most needed for smaller-scale organizations and address free tools for those who don't know what they don't know. They will have easy steps and walkthroughs for non-tech-savvy clients who wish to improve their security without prior knowledge while self-teaching themselves the how and why.
 
