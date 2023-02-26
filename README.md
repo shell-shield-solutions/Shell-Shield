@@ -1,11 +1,11 @@
 # Shell Shield Solutions
 
-ShellSheild is currently working on a security solution for non-profit and small-scale organizations.
+ShellShield is currently working on a security solution for non-profit and small-scale organizations.
 
-ShellSheild is designed to provide easy-to-use universal security techniques for organizations to adopt and better protect their services and data. Often these companies do not have many resources or a large enough budget to implement an entire IT department for their business but instead seek out-sourced options.
+ShellShield is designed to provide easy-to-use universal security techniques for organizations to adopt and better protect their services and data. Often these companies do not have many resources or a large enough budget to implement an entire IT department for their business but instead seek out-sourced options.
 
 ShellSheild includes three primary areas of focus:
-- Web Security
+- Endpoint Management
 - Network Security
 - Communication Security
 
