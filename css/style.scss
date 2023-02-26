@@ -218,6 +218,12 @@ body {
         gap: 24px;
         justify-content: space-around;
 
+        // display: grid;
+        // gap: 24px;
+        // grid-template-columns: repeat(auto-fill, 324px); 
+        // justify-content: space-around;
+        // padding: 0 24px;
+
         .card {
             text-align: center;
             width: 324px;
@@ -262,7 +268,6 @@ body {
         .tile {
             .img {
                 background-color: map-get($colors, light_gray);
-                // box-shadow: 4px 4px 4px map-get($colors, dark_gray_shadow);
                 height: 188px;
             }
 
@@ -277,6 +282,22 @@ body {
                     font-size: .875em;
                     padding: 2px 8px;
                 }
+            }
+        }
+
+        @include breakpoint(767px) {
+            grid-template-columns: repeat(auto-fill, 243px); 
+
+            .tile .img {
+                height: 141px;
+            }
+        }
+        
+        @include breakpoint(605px) {
+            grid-template-columns: repeat(auto-fill, 324px); 
+
+            .tile .img {
+                height: 188px;
             }
         }
     }

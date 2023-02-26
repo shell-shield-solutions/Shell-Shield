@@ -168,7 +168,7 @@ body .title-band hr {
   background-position: center;
   background-repeat: no-repeat;
   border-radius: 100vmax;
-  box-shadow: 4px 4px 4px hsla(0deg, 0%, 65%, 0.5);
+  box-shadow: 4px 4px 4px hsla(0, 0%, 65%, 0.5);
   height: 48px;
   margin: 0 auto 6px;
   width: 48px;
@@ -207,6 +207,22 @@ body .title-band hr {
   background-color: #F2F2F2;
   font-size: 0.875em;
   padding: 2px 8px;
+}
+@media (max-width: 767px) {
+  #insights .article-tiles {
+    grid-template-columns: repeat(auto-fill, 243px);
+  }
+  #insights .article-tiles .tile .img {
+    height: 141px;
+  }
+}
+@media (max-width: 605px) {
+  #insights .article-tiles {
+    grid-template-columns: repeat(auto-fill, 324px);
+  }
+  #insights .article-tiles .tile .img {
+    height: 188px;
+  }
 }
 
 #footer {
