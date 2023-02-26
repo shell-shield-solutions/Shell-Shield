@@ -75,6 +75,7 @@ body .title-band hr {
   color: #262625;
   display: flex;
   font-weight: 600;
+  text-transform: uppercase;
 }
 #header #logo-block #header-logo .logo {
   background-image: url(/Shell-Shield/assets/icon/logo.svg);
@@ -195,18 +196,31 @@ body .title-band hr {
 }
 #insights .article-tiles .tile .img {
   background-color: #F2F2F2;
+  border-radius: 12px;
   height: 188px;
 }
 #insights .article-tiles .tile .tag-list {
   display: inline-flex;
   flex-wrap: wrap;
   gap: 6px;
+  margin-bottom: 4px;
   padding: 6px 0 4px 0;
 }
 #insights .article-tiles .tile .tag-list .tag {
+  border-radius: 6px;
   background-color: #F2F2F2;
+}
+#insights .article-tiles .tile .tag-list .tag a {
+  color: #262625;
   font-size: 0.875em;
-  padding: 2px 8px;
+  padding: 2px 12px;
+}
+#insights .article-tiles .tile h3 {
+  margin-bottom: 2px;
+}
+#insights .article-tiles .tile p {
+  font-size: 0.875em;
+  margin-bottom: 6px;
 }
 @media (max-width: 767px) {
   #insights .article-tiles {
