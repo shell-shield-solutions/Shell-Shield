@@ -20,6 +20,15 @@ body a {
 body a.link:hover {
   text-decoration: underline;
 }
+body a.arrow {
+  background: url(/assets/icon/right-arrow.svg) right center no-repeat;
+  background-size: 12px;
+  padding-right: 18px;
+  transition: 0.125s linear;
+}
+body a.arrow:hover {
+  padding-right: 20px;
+}
 body .btn {
   border: none;
   font-family: "Nunito Sans", sans-serif;
@@ -159,6 +168,11 @@ body .title-band hr {
   background: url(/Shell-Shield/assets/img/hero-home.png) left center no-repeat;
   height: 500px;
 }
+@media (max-width: 829px) {
+  #hero .hero-bg {
+    height: 250px;
+  }
+}
 
 #focus .focus-cards {
   display: flex;
@@ -216,11 +230,15 @@ body .title-band hr {
 #insights .article-tiles .tile .tag-list .tag {
   border-radius: 6px;
   background-color: #F2F2F2;
+  transition: 0.125s linear;
 }
 #insights .article-tiles .tile .tag-list .tag a {
   color: #262625;
   font-size: 0.875em;
   padding: 2px 12px;
+}
+#insights .article-tiles .tile .tag-list .tag:hover {
+  filter: drop-shadow(2px 2px 2px hsla(0, 0%, 65%, 0.5));
 }
 #insights .article-tiles .tile h3 {
   margin-bottom: 2px;

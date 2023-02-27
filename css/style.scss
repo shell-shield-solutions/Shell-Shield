@@ -46,6 +46,17 @@ body {
         &.link:hover {
             text-decoration: underline;
         }
+
+        &.arrow {
+            background: url(/assets/icon/right-arrow.svg) right center no-repeat;
+            background-size: 12px;
+            padding-right: 18px;
+            transition: .125s linear;
+
+            &:hover {
+                padding-right: 20px;
+            }
+        }
     }
 
     .btn {
@@ -212,6 +223,10 @@ body {
     .hero-bg {
         background: url(/Shell-Shield/assets/img/hero-home.png) left center no-repeat;
         height: 500px;
+
+        @include breakpoint(829px) {
+            height: 250px;
+        }
     }
 }
 
@@ -281,11 +296,16 @@ body {
                 .tag {
                     border-radius: 6px;
                     background-color: map-get($colors, light_gray);
+                    transition: .125s linear;
                     
                     a {
                         color: map-get($colors, text);
                         font-size: .875em;
                         padding: 2px 12px;
+                    }
+
+                    &:hover {
+                        filter: drop-shadow(2px 2px 2px map-get($colors, dark_gray_shadow));
                     }
                 }
             }
