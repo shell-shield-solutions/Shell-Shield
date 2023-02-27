@@ -113,6 +113,7 @@ body {
     border-bottom: 2px solid map-get($colors, med_gray);
     display: flex;
     font-size: 1em;
+    height: 64px;
     justify-content: space-between;
     padding: 0 24px;
     width: 100%;
@@ -204,10 +205,6 @@ body {
                 transform: scale(1.125);
             }
         }
-    }
-
-    @include breakpoint(829px) {
-        height: 58.5px;
     }
 }
 

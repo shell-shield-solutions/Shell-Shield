@@ -76,6 +76,7 @@ body .title-band hr {
   border-bottom: 2px solid #D9D9D8;
   display: flex;
   font-size: 1em;
+  height: 64px;
   justify-content: space-between;
   padding: 0 24px;
   width: 100%;
@@ -152,11 +153,6 @@ body .title-band hr {
 #header #nav-block #mobile-nav:hover {
   cursor: pointer;
   transform: scale(1.125);
-}
-@media (max-width: 829px) {
-  #header {
-    height: 58.5px;
-  }
 }
 
 #hero .hero-bg {
