@@ -12,6 +12,7 @@ $colors: (
     dark_blue_gray: #495B73,
 
     text: #262625,
+    text-inverse: hsl(0, 0%, 95%),
     
     dark_gray_shadow: hsla(0, 0%, 65%, 0.5),
     black_shadow: #27272680,
@@ -36,7 +37,7 @@ body {
     font-weight: 500;
 
     a, span, h1, h2, h3 {
-        display: block;
+        display: inline-block;
     }
 
     a {
@@ -44,11 +45,14 @@ body {
     }
 
     .btn {
+        border: none;
+        font-family: 'Nunito Sans', sans-serif;
+        font-size: 1em;
+        font-weight: 600;
+
         &.solid {
             color: map-get($colors, light_gray);
-            font-weight: 600;
-            padding: 8px 24px;
-            transition: .125s linear;
+            padding: 10px 24px;
             cursor: pointer;
 
             &.red {
@@ -92,6 +96,8 @@ body {
 }
 
 #site-wrapper {
+    position: relative;
+
     #main > div {
         max-width: calc(100vw - 48px);
         margin: 0 auto 48px;
@@ -143,12 +149,8 @@ body {
 
             .drawer {
                 &:hover {
-
                     .dropdown {
                         font-size: 0.875em;
-
-                        a:hover {
-                        }
                     }
                 }
             }
@@ -273,6 +275,7 @@ body {
                 gap: 6px;
                 margin-bottom: 4px;
                 padding: 6px 0 4px 0;
+                width: 100%;
                 
                 .tag {
                     border-radius: 6px;
@@ -293,9 +296,6 @@ body {
             p {
                 font-size: .875em;
                 margin-bottom: 6px;
-            }
-
-            > a {
             }
         }
 
@@ -318,12 +318,13 @@ body {
 }
 
 #footer {
-    padding: 0px 24px;
+    background-color: map-get($colors, light_gray);
+    padding: 24px 48px 48px;
 
     #breadcrumbs {
         display: flex;
         flex-direction: row;
-        column-gap: 32px;
+        gap: 32px;
         flex-wrap: wrap;
         margin: 0 auto;
         
@@ -338,6 +339,11 @@ body {
             font-size: .75em;
             padding-bottom: 4px;
             text-decoration: none;
+        }
+
+        @include breakpoint(616px) {
+            flex-direction: column;
+            gap: 16px;
         }
     }
 }

@@ -12,16 +12,20 @@ body {
   font-weight: 500;
 }
 body a, body span, body h1, body h2, body h3 {
-  display: block;
+  display: inline-block;
 }
 body a {
   text-decoration: none;
 }
+body .btn {
+  border: none;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1em;
+  font-weight: 600;
+}
 body .btn.solid {
   color: #F2F2F2;
-  font-weight: 600;
-  padding: 8px 24px;
-  transition: 0.125s linear;
+  padding: 10px 24px;
   cursor: pointer;
 }
 body .btn.solid.red {
@@ -56,6 +60,9 @@ body .title-band hr {
   z-index: 1;
 }
 
+#site-wrapper {
+  position: relative;
+}
 #site-wrapper #main > div {
   max-width: calc(100vw - 48px);
   margin: 0 auto 48px;
@@ -205,6 +212,7 @@ body .title-band hr {
   gap: 6px;
   margin-bottom: 4px;
   padding: 6px 0 4px 0;
+  width: 100%;
 }
 #insights .article-tiles .tile .tag-list .tag {
   border-radius: 6px;
@@ -240,13 +248,13 @@ body .title-band hr {
 }
 
 #footer {
-  padding: 0px 24px;
+  background-color: #F2F2F2;
+  padding: 24px 48px 48px;
 }
 #footer #breadcrumbs {
   display: flex;
   flex-direction: row;
-  -moz-column-gap: 32px;
-       column-gap: 32px;
+  gap: 32px;
   flex-wrap: wrap;
   margin: 0 auto;
 }
@@ -260,4 +268,10 @@ body .title-band hr {
   font-size: 0.75em;
   padding-bottom: 4px;
   text-decoration: none;
+}
+@media (max-width: 616px) {
+  #footer #breadcrumbs {
+    flex-direction: column;
+    gap: 16px;
+  }
 }/*# sourceMappingURL=style.css.map */
