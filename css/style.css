@@ -21,7 +21,7 @@ body a.link:hover {
   text-decoration: underline;
 }
 body a.arrow {
-  background: url(/assets/icon/right-arrow.svg) right center no-repeat;
+  background: url(/Shell-Shield/assets/icon/right-arrow.svg) right center no-repeat;
   background-size: 12px;
   padding-right: 18px;
   transition: 0.125s linear;
