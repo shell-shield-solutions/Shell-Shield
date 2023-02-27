@@ -159,9 +159,9 @@ body .title-band hr {
   }
 }
 
-#hero .img {
-  background-color: #F2F2F2;
-  height: 325px;
+#hero .hero-bg {
+  background: url(/Shell-Shield/assets/img/hero-home.png) left center no-repeat;
+  height: 500px;
 }
 
 #focus .focus-cards {
