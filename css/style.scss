@@ -42,6 +42,10 @@ body {
 
     a {
         text-decoration: none;
+
+        &.link:hover {
+            text-decoration: underline;
+        }
     }
 
     .btn {
@@ -98,7 +102,7 @@ body {
 #site-wrapper {
     position: relative;
 
-    #main > div {
+    #main > div:not(#hero) {
         max-width: calc(100vw - 48px);
         margin: 0 auto 48px;
     }
@@ -338,7 +342,6 @@ body {
             color: map-get($colors, text);
             font-size: .75em;
             padding-bottom: 4px;
-            text-decoration: none;
         }
 
         @include breakpoint(616px) {
