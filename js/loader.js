@@ -1,21 +1,17 @@
 // WIP, reusable component loading
 
-const loadComponents = (target, path) => {
+const loadComponent = (target, path) => {
     fetch(path)
         .then((response) => { return response.text(); })
         .then((result) => {
             let parser = new DOMParser(),
                 data = parser.parseFromString(result, 'text/html'),
-                component = data.body.querySelector(target)
+                component = data.body.querySelector('div')
 
-            for (let i = 0; i < component.childElementCount; i++) {
-                console.log(component.children[i])
-                // document.querySelector(target).append(component.children[i])
-
+            if ((component) !== null) {
+                document.querySelector(target).append((component))
             }
-
-            // document.querySelector(target).append(component)
         })
 }
 
-export default loadComponents
+export default loadComponent
