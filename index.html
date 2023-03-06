@@ -7,80 +7,50 @@
     <title>Shell Shield | Home</title>
     <link rel="icon" type="image/x-icon" href="/Shell-Shield/assets/img/favico.png">
     <link rel="stylesheet" href="/Shell-Shield/css/style.css">
-    <!-- <script src="js/main.js" type="module" async></script> -->
+    <script src="/Shell-Shield/js/main.js" type="module" async></script>
 </head>
 <body>
-    <div id="site-wrapper">
-        <div id="header">
-            <div id="logo-block">
-                <a href="/Shell-Shield" id="header-logo">
-                    <span class="logo"></span>
-                    Shell Shield Solutions
-                </a>
-            </div>
-            <div id="nav-block">
-                <ul id="navigation">
-                    <li>
-                        <div class="drawer">
-                            <a href="/Shell-Shield/solutions/index.html">Solutions</a>
-                            <div class="dropdown">
-                                <ul>
-                                    <li>
-                                        <a href="#" class="link">Network Security</a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="link">Endpoint Management</a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="link">User Awareness</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="drawer">
-                            <a href="/Shell-Shield/resources/index.html" class="link">Resources</a>
-                            <!-- <div class="dropdown">
-                                <ul>
-                                    <li>
-                                        <a href="#">Placeholder</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Placeholder</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Placeholder</a>
-                                    </li>
-                                </ul>
-                            </div> -->
-                        </div>
-                    </li>
-                    <li>
-                        <div class="drawer">
-                            <a href="/Shell-Shield/about/index.html">About Us</a>
-                            <div class="dropdown">
-                                <ul>
-                                    <li>
-                                        <a href="#" class="link">Mission</a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="link">Vision Statement</a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="link">Contributors</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <button type="button" class="btn solid red">Contact Us</button>
-                    </li>
-                </ul>
-                <button type="button" id="mobile-nav"></button>
-            </div>            
+    <!-- <div id="mobile-nav">
+        <div class="panel">
+            <ul>
+                <li>
+                    <a href="#" class="title">Solutions</a>
+                    <ul>
+                        <li>
+                            <a href="#">Network Security</a>
+                        </li>
+                        <li>
+                            <a href="#">Endpoint Management</a>
+                        </li>
+                        <li>
+                            <a href="#">User Awareness</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="title">Resources</a>
+                    <ul></ul>
+                </li>
+                <li>
+                    <a href="#" class="title">About Us</a>
+                        <ul>
+                            <li>
+                                <a href="#">Mission</a>
+                            </li>
+                            <li>
+                                <a href="#">Vision Statement</a>
+                            </li>
+                            <li>
+                                <a href="#">Contributors</a>
+                            </li>
+                        </ul>
+                </li>
+            </ul>
+            <button type="button" id="mobile-nav-close" class="btn icon"></button>
         </div>
+    </div> -->
+    <div id="site-wrapper" class="home">
+        <div id="header"></div>
         <div id="main">
             <div id="hero">
                 <div class="hero-bg">
@@ -95,18 +65,18 @@
                 <div class="focus-cards">
                     <div class="card">
                         <div class="network icon"></div>
-                        <h3>Network Security</h3>
+                        <h3 class="title">Network Security</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fames ac turpis egestas sed tempus urna et pharetra pharetra.</p>
                     </div>
                     <div class="card">
                         <div class="endpoint icon"></div>
-                        <h3>Endpoint Management</h3>
-                        <p>Egestas sed sed risus pretium quam vulputate dignissim. Tincidunt eget nullam non nisi est. Commodo elit at imperdiet dui.</p>
+                        <h3 class="title">Endpoint Management</h3>
+                        <p>Controlling devices on the network while protecting their data and maintaining their functionality</p>
                     </div>
                     <div class="card">
                         <div class="user icon"></div>
-                        <h3>User Awareness Training</h3>
-                        <p>Scelerisque mauris pellentesque pulvinar pellentesque habitant. Netus et malesuada fames ac turpis egestas integer.</p>
+                        <h3 class="title">User Awareness Training</h3>
+                        <p>Education about the traps that users commonly fall into, creating vulnerabilities within an organization, and teaching them how to stop them from happening</p>
                     </div>
                 </div>
             </div>
@@ -115,7 +85,40 @@
                     <h2 class="title">Featured Insights</h2>
                     <hr>
                 </div>
-                <div class="article-tiles">
+                <div id="article-tiles" class="matrix">
+                    <div class="tile">
+                        <div class="img"></div>
+                        <ul class="tag-list">
+                            <li class="tag">
+                                <a href="#">Placeholder Tag</a>
+                            </li>
+                        </ul>
+                        <h3>Placeholder Title</h3>
+                        <p>Some placeholder text describing the purpose of the article.</p>
+                        <a href="#" class="arrow">Read More</a>
+                    </div>
+                    <div class="tile">
+                        <div class="img"></div>
+                        <ul class="tag-list">
+                            <li class="tag">
+                                <a href="#">Placeholder Tag</a>
+                            </li>
+                        </ul>
+                        <h3>Placeholder Title</h3>
+                        <p>Some placeholder text describing the purpose of the article.</p>
+                        <a href="#" class="arrow">Read More</a>
+                    </div>
+                    <div class="tile">
+                        <div class="img"></div>
+                        <ul class="tag-list">
+                            <li class="tag">
+                                <a href="#">Placeholder Tag</a>
+                            </li>
+                        </ul>
+                        <h3>Placeholder Title</h3>
+                        <p>Some placeholder text describing the purpose of the article.</p>
+                        <a href="#" class="arrow">Read More</a>
+                    </div>
                     <div class="tile">
                         <div class="img"></div>
                         <ul class="tag-list">
@@ -130,52 +133,7 @@
                 </div>
             </div>
         </div>
-        <div id="footer">
-            <div id="breadcrumbs">
-                <div>
-                    <a href="/Shell-Shield/solutions/index.html" class="title link">Shell Shield Solutions</a>
-                    <ul>
-                        <li>
-                            <p>Phoenix, AZ, 85017</p>
-                        </li>
-                        <li>
-                            <a href="#" class="link">shellshieldsolutions@gmail.com</a>
-                        </li>
-                    </ul>
-                </div>
-                <div>
-                    <a href="/Shell-Shield/solutions/index.html" class="title link">Solutions</a>
-                    <ul>
-                        <li>
-                            <a href="#" class="link">Network Security</a>
-                        </li>
-                        <li>
-                            <a href="#" class="link">Web Security</a>
-                        </li>
-                        <li>
-                            <a href="#" class="link"> User Awareness</a>
-                        </li>
-                    </ul>
-                </div>
-                <div>
-                    <a href="/Shell-Shield/resources/index.html" class="title link">Resources</a>
-                </div>
-                <div>
-                    <a href="/Shell-Shield/about/index.html" class="title link">About Us</a>
-                    <ul>
-                        <li>
-                            <a href="#" class="link">Mission</a>
-                        </li>
-                        <li>
-                            <a href="#" class="link">Vision Statement</a>
-                        </li>
-                        <li>
-                            <a href="#" class="link">Contributors</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+        <div id="footer"></div>
     </div>
 </body>
 </html>
