@@ -15,7 +15,7 @@ $colors: (
     text-inverse: hsl(0, 0%, 95%),
     
     dark_gray_shadow: hsla(0, 0%, 65%, 0.5),
-    black_shadow: #27272680,
+    black_shadow: hsla(60, 1%, 15%, 0.33),
     
     light_gray: #F2F2F2,
     med_gray: #D9D9D8,
@@ -84,6 +84,19 @@ body {
                 outline-offset: -2px;
             }
         }
+
+        &.icon {
+            background-color: transparent;
+            background-position: center;
+            background-repeat: no-repeat;
+            border: none;
+
+            &:hover {
+                background-color: map-get($colors, light_gray);
+                cursor: pointer;
+                transform: scale(1.125);
+            }
+        }
     }
 
     .title-band {
@@ -107,6 +120,96 @@ body {
             top: calc(50% - 2px);
             z-index: 1;
         }
+
+        &.below {
+            justify-content: left;
+
+            h2 {
+                background-color: transparent;
+                margin: 0 0 48px 24px;
+                padding: 0;
+            }
+        }
+    }
+
+    .matrix {
+        display: grid;
+        gap: 32px 24px;
+        grid-template-columns: repeat(auto-fill, 324px); 
+        justify-content: space-around;
+        padding: 0 24px;
+
+        @include breakpoint(767px) {
+            grid-template-columns: repeat(auto-fill, 243px); 
+
+            .tile .img {
+                height: 141px;
+            }
+        }
+        
+        @include breakpoint(605px) {
+            grid-template-columns: repeat(auto-fill, 324px); 
+
+            .tile .img {
+                height: 188px;
+            }
+        }
+    }
+}
+
+#mobile-nav {
+    background-color: map-get($colors, black_shadow);
+    display: none;
+    height: 100vh;
+    position: fixed;
+    width: 100vw;
+    z-index: 20;
+
+    .panel {
+        background-color: #FFFFFF;
+        float: right;
+        height: 100vh;
+        // padding: 24px;
+        width: 258px;
+
+        a {
+            width: 100%;
+
+            &:hover {
+                background-color: map-get($colors, light_gray);
+            }
+        }
+
+        li {
+            .title {
+                font-size: 1.125em;
+                padding: 8px 24px;
+            }
+
+            ul {
+
+                a {
+                    padding: 4px 32px;
+                }
+            }
+        }
+
+        #mobile-nav-close {
+            background-image: url(/Shell-Shield/assets/icon/menu-close.svg);
+            background-size: 16px;
+            border-radius: 100vmax;
+            height: 16px;
+            padding: 20px;
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            transition: .125s linear;
+            width: 16px;
+        }
+    }
+
+    @include breakpoint(829px) {
+        display: block;
     }
 }
 
@@ -119,7 +222,7 @@ body {
     }
 }
 
-#header {
+#header > div {
     align-items: center;
     border-bottom: 2px solid map-get($colors, med_gray);
     display: flex;
@@ -129,7 +232,7 @@ body {
     padding: 0 24px;
     width: 100%;
 
-    #logo-block {
+    .logo-block {
         #header-logo {
             align-items: center;
             color: map-get($colors, text);
@@ -149,7 +252,7 @@ body {
         }
     }
 
-    #nav-block {
+    .nav-block {
         #navigation {
             align-items: center;
             display: flex;
@@ -194,26 +297,18 @@ body {
             }
         }
 
-        #mobile-nav {
-            background-color: transparent;
-            background-image: url(/Shell-Shield//assets/icon/menu.svg);
-            background-position: center;
-            background-repeat: no-repeat;
+        #mobile-menu-btn {
+            background-image: url(/Shell-Shield/assets/icon/menu.svg);
             background-size: 24px 16px;
-            border: none;
+            border-radius: 100vmax;
             display: none;
             height: 16px;
-            mask-size: 100%;
+            padding: 20px;
             transition: .125s linear;
             width: 24px;
 
             @include breakpoint(829px) {
                 display: block;
-            }
-
-            &:hover {
-                cursor: pointer;
-                transform: scale(1.125);
             }
         }
     }
@@ -240,6 +335,10 @@ body {
         .card {
             text-align: center;
             width: 324px;
+
+            .title {
+                margin-bottom: 4px;
+            }
 
             .icon {
                 background-color: map-get($colors, light_gray);
@@ -271,13 +370,7 @@ body {
 }
 
 #insights {
-    .article-tiles {
-        display: grid;
-        gap: 24px;
-        grid-template-columns: repeat(auto-fill, 324px); 
-        justify-content: space-around;
-        padding: 0 24px;
-
+    #article-tiles {
         .tile {
             .img {
                 background-color: map-get($colors, light_gray);
@@ -319,26 +412,34 @@ body {
                 margin-bottom: 6px;
             }
         }
+    }
+}
 
-        @include breakpoint(767px) {
-            grid-template-columns: repeat(auto-fill, 243px); 
+#featured {}
 
-            .tile .img {
-                height: 141px;
-            }
-        }
-        
-        @include breakpoint(605px) {
-            grid-template-columns: repeat(auto-fill, 324px); 
-
-            .tile .img {
+#resources {
+    #resource-tiles {
+        .tile {
+            border-radius: 12px;
+            box-shadow: 4px 4px 4px map-get($colors, dark_gray_shadow);
+            position: relative;
+            
+            .img {
+                border-radius: 12px;
                 height: 188px;
+                background-color: map-get($colors, light_gray);
+            }
+
+            .title {
+                bottom: 8px;
+                padding: 0 16px;
+                position: absolute;
             }
         }
     }
 }
 
-#footer {
+#footer > div {
     background-color: map-get($colors, light_gray);
     padding: 24px 48px 48px;
 
