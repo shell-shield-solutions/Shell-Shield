@@ -42,6 +42,7 @@ body {
 
     a {
         text-decoration: none;
+        transition: .125s linear;
 
         &.link:hover {
             text-decoration: underline;
@@ -90,6 +91,7 @@ body {
             background-position: center;
             background-repeat: no-repeat;
             border: none;
+            transition: .125s linear;
 
             &:hover {
                 background-color: map-get($colors, light_gray);
@@ -159,57 +161,61 @@ body {
 
 #mobile-nav {
     background-color: map-get($colors, black_shadow);
-    display: none;
     height: 100vh;
     position: fixed;
     width: 100vw;
     z-index: 20;
 
+    display: none;
+
     .panel {
-        background-color: #FFFFFF;
-        float: right;
-        height: 100vh;
-        // padding: 24px;
+        background-color: #fff;
+        height: 100%;
+        position: absolute;
+        right: 0;
         width: 258px;
 
-        a {
-            width: 100%;
+        .nav-header {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 24px;
 
-            &:hover {
-                background-color: map-get($colors, light_gray);
+            .nav-logo {
+                background: url(/assets/icon/logo.svg) center no-repeat;
+                background-size: 100%;
+                height: 24px;
+                padding: 20px;
+                width: 24px;
+            }
+
+            #nav-close {
+                background-image: url(/assets/icon/nav-close.svg);
+                background-size: 16px;
+                border-radius: 100vmax;
+                height: 24px;
+                padding: 20px;
+                width: 24px;
             }
         }
 
-        li {
-            .title {
-                font-size: 1.125em;
-                padding: 8px 24px;
-            }
+        .nav-items {
+            .link {
+                color: map-get($colors, text);
+                display: inline-block;
+                font-size: 1em;
+                padding: 8px 32px;
+                width: 100%;
+                
+                &.title {
+                    font-size: 1.125em;
+                    padding: 8px 24px;
+                }
 
-            ul {
-
-                a {
-                    padding: 4px 32px;
+                &:hover {
+                    background-color: map-get($colors, light_gray);
                 }
             }
         }
-
-        #mobile-nav-close {
-            background-image: url(/Shell-Shield/assets/icon/menu-close.svg);
-            background-size: 16px;
-            border-radius: 100vmax;
-            height: 16px;
-            padding: 20px;
-            position: absolute;
-            right: 0px;
-            top: 0px;
-            transition: .125s linear;
-            width: 16px;
-        }
-    }
-
-    @include breakpoint(829px) {
-        display: block;
     }
 }
 
@@ -222,7 +228,7 @@ body {
     }
 }
 
-#header > div {
+#header {
     align-items: center;
     border-bottom: 2px solid map-get($colors, med_gray);
     display: flex;
@@ -315,6 +321,9 @@ body {
 }
 
 #hero {
+    display: flex;
+    flex-direction: column;
+
     .hero-bg {
         background: url(/Shell-Shield/assets/img/hero-home.png) left center no-repeat;
         height: 500px;
@@ -323,6 +332,63 @@ body {
             height: 250px;
         }
     }
+
+    img {
+        border-radius: 12px;
+        margin: 24px auto;
+        max-width: 90%;
+
+        @include breakpoint(829px) {
+            // max-width: 80%;
+        }
+    }
+}
+
+#article {
+    margin: 0 auto;
+    width: max(934px);
+
+    .bold {
+        font-weight: bold;
+    }
+
+    ul  {
+        padding-left: 40px;
+
+        li {
+            list-style: disc;
+        }
+    }
+
+    #credits {
+        display: flex;
+        align-items: center;
+
+        .profile-pic {
+            background-color: gray;
+            width: 56px;
+            height: 56px;
+            border-radius: 100vmax;
+        }
+    }
+
+    .section {
+        margin-bottom: 24px;
+        
+        .section-title {
+            font-size: 1.5em;
+            margin-bottom: 4px;
+        }
+
+        p:not(:last-of-type) {
+            margin-bottom: 6px;
+        }
+
+        li:not(:last-of-type) {
+            margin-bottom: 4px;
+        }
+    }
+
 }
 
 #focus {
@@ -351,17 +417,17 @@ body {
                 width: 48px;
                 
                 &.network {
-                    background-image: url(/Shell-Shield//assets/icon/wifi.svg);
+                    background-image: url(/Shell-Shield/assets/icon/wifi.svg);
                     background-size: 24px 17px;
                 }
                 
                 &.endpoint {
-                    background-image: url(/Shell-Shield//assets/icon/laptop.svg);
+                    background-image: url(/Shell-Shield/assets/icon/laptop.svg);
                     background-size: 24px 17px;
                 }
                 
                 &.user {
-                    background-image: url(/Shell-Shield//assets/icon/user.svg);
+                    background-image: url(/Shell-Shield/assets/icon/user.svg);
                     background-size: 16px;
                 }
             }
@@ -372,8 +438,7 @@ body {
 #insights {
     #article-tiles {
         .tile {
-            .img {
-                background-color: map-get($colors, light_gray);
+            img {
                 border-radius: 12px;
                 height: 188px;
             }
@@ -395,10 +460,6 @@ body {
                         color: map-get($colors, text);
                         font-size: .875em;
                         padding: 2px 12px;
-                    }
-
-                    &:hover {
-                        filter: drop-shadow(2px 2px 2px map-get($colors, dark_gray_shadow));
                     }
                 }
             }
@@ -439,7 +500,7 @@ body {
     }
 }
 
-#footer > div {
+#footer {
     background-color: map-get($colors, light_gray);
     padding: 24px 48px 48px;
 
