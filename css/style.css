@@ -165,6 +165,7 @@ body .matrix {
   display: inline-block;
   font-size: 1em;
   padding: 8px 32px;
+  transition: 0.125s linear;
   width: 100%;
 }
 #mobile-nav .panel .nav-items .link.title {
@@ -246,7 +247,7 @@ body .matrix {
     display: none;
   }
 }
-#header .nav-block #mobile-menu-btn {
+#header .nav-block #nav-open {
   background-image: url(/Shell-Shield/assets/icon/menu.svg);
   background-size: 24px 16px;
   border-radius: 100vmax;
@@ -257,7 +258,7 @@ body .matrix {
   width: 24px;
 }
 @media (max-width: 829px) {
-  #header .nav-block #mobile-menu-btn {
+  #header .nav-block #nav-open {
     display: block;
   }
 }

@@ -209,6 +209,7 @@ body {
                 display: inline-block;
                 font-size: 1em;
                 padding: 8px 32px;
+                transition: .125s linear;
                 width: 100%;
                 
                 &.title {
@@ -312,7 +313,7 @@ body {
             }
         }
 
-        #mobile-menu-btn {
+        #nav-open {
             background-image: url(/Shell-Shield/assets/icon/menu.svg);
             background-size: 24px 16px;
             border-radius: 100vmax;
