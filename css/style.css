@@ -42,6 +42,7 @@ body .btn {
   font-weight: 600;
   width: -moz-fit-content;
   width: fit-content;
+  transition: 0.125s linear;
 }
 body .btn.solid {
   color: #F2F2F2;
@@ -221,6 +222,9 @@ body .matrix {
 }
 #header .nav-block #navigation .drawer:hover .dropdown {
   font-size: 0.875em;
+}
+#header .nav-block #navigation .drawer a.link:not(.title):hover {
+  background-color: #F2F2F2;
 }
 #header .nav-block #navigation .dropdown {
   background-color: #FFFFFF;

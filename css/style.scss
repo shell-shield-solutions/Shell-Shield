@@ -68,6 +68,7 @@ body {
         font-size: 1em;
         font-weight: 600;
         width: fit-content;
+        transition: .125s linear;
 
         &.solid {
             color: map-get($colors, light_gray);
@@ -281,6 +282,10 @@ body {
                     .dropdown {
                         font-size: 0.875em;
                     }
+                }
+
+                a.link:not(.title):hover {
+                    background-color: map-get($colors, light_gray);
                 }
             }
 
