@@ -549,15 +549,15 @@ body {
                 height: 48px;
                 max-width: 324px;
                 padding: 0 16px;
+            }
 
-                &#message {
-                    font-family: 'Nunito Sans', sans-serif;
-                    height: 120px;
-                    padding: 16px;
-                    max-width: 100%;
-                    min-width: 100%;
-                    resize: none;
-                }
+            textarea {
+                font-family: 'Nunito Sans', sans-serif;
+                height: 120px;
+                padding: 16px;
+                max-width: 100%;
+                min-width: 100%;
+                resize: none;
             }
         }
     }

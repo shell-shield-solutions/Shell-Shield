@@ -165,11 +165,11 @@
                 </div>
                 <h3>Have questions? Let us know below.</h3>
                 <div class="contact-form">
-                    <form action="">
-                        <input type="text" name="email-form" id="name" placeholder="Name">
-                        <input type="text" name="email-form" id="email" placeholder="Email">
-                        <textarea name="email-form" id="message" placeholder="Message"></textarea>
-                        <button class="btn solid red">Submit</button>
+                    <form name="email-form" action="emailHandling.php" method="post">
+                        <input type="text" name="sender" placeholder="Name">
+                        <input type="text" name="address" placeholder="Email">
+                        <textarea name="form-message" placeholder="Message"></textarea>
+                        <button type="submit" name="message" class="btn solid red">Submit</button>
                     </form>
                 </div>
             </div>

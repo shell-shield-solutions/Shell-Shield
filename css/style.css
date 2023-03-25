@@ -439,7 +439,7 @@ body .matrix {
   max-width: 324px;
   padding: 0 16px;
 }
-#contact-us .contact-form form input#message, #contact-us .contact-form form textarea#message {
+#contact-us .contact-form form textarea {
   font-family: "Nunito Sans", sans-serif;
   height: 120px;
   padding: 16px;
