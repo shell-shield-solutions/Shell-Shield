@@ -17,7 +17,6 @@ body a, body span, body h1, body h2, body h3 {
 }
 body h3 {
   font-size: 1.125em;
-  margin-bottom: 24px;
 }
 body a {
   text-decoration: none;
@@ -182,6 +181,13 @@ body .matrix {
 #site-wrapper #main > div:not(#hero) {
   max-width: calc(100vw - 48px);
   margin: 0 auto 48px;
+}
+#site-wrapper #main > div:not(#hero) p:not(:only-of-type, :last-of-type) {
+  line-height: 1.5em;
+  margin-bottom: 12px;
+}
+#site-wrapper #main > div:not(#hero):last-child {
+  margin-bottom: 96px;
 }
 
 #header {
@@ -390,6 +396,37 @@ body .matrix {
   color: #262625;
 }
 
+#contributors .card {
+  background-color: #A6A6A6;
+  border-radius: 12px;
+  box-shadow: 4px 4px 4px hsla(0, 0%, 65%, 0.5);
+  height: 350px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  width: 250px;
+}
+#contributors .card .heading {
+  background-color: #F2F2F2;
+  bottom: 0;
+  padding: 4px 16px;
+  position: absolute;
+  width: 100%;
+  color: #262625;
+}
+#contributors .card .heading p:not(:last-child) {
+  padding-bottom: 8px;
+}
+#contributors .card .heading .social {
+  background: center no-repeat;
+  background-size: 100%;
+}
+#contributors .card .heading .linkedin {
+  background-image: url(/assets/icon/linkedin.svg);
+  height: 24px;
+  width: 24px;
+}
+
 #resources #resource-tiles .tile {
   border-radius: 12px;
   box-shadow: 4px 4px 4px hsla(0, 0%, 65%, 0.5);
@@ -404,48 +441,6 @@ body .matrix {
   bottom: 8px;
   padding: 0 16px;
   position: absolute;
-}
-
-#contact-us > * {
-  padding: 0 78px;
-}
-@media (max-width: 1115px) {
-  #contact-us > * {
-    padding: 0 58px;
-  }
-}
-@media (max-width: 808px) {
-  #contact-us > * {
-    padding: 0 29px;
-  }
-}
-@media (max-width: 500px) {
-  #contact-us > * {
-    padding: 0 9px;
-  }
-}
-#contact-us .contact-form form {
-  display: flex;
-  flex-direction: column;
-  max-width: 567px;
-  row-gap: 16px;
-}
-#contact-us .contact-form form input, #contact-us .contact-form form textarea {
-  background-color: #F2F2F2;
-  border: none;
-  border-radius: 12px;
-  font-size: 0.875em;
-  height: 48px;
-  max-width: 324px;
-  padding: 0 16px;
-}
-#contact-us .contact-form form textarea {
-  font-family: "Nunito Sans", sans-serif;
-  height: 120px;
-  padding: 16px;
-  max-width: 100%;
-  min-width: 100%;
-  resize: none;
 }
 
 #footer {

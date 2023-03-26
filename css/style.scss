@@ -39,7 +39,6 @@ body {
 
     h3 {
         font-size: 1.125em;
-        margin-bottom: 24px;
     }
 
     a {
@@ -231,6 +230,15 @@ body {
     #main > div:not(#hero) {
         max-width: calc(100vw - 48px);
         margin: 0 auto 48px;
+
+        p:not(:only-of-type, :last-of-type) {
+            line-height: 1.5em;
+            margin-bottom: 12px;
+        }
+
+        &:last-child {
+            margin-bottom: 96px;
+        }
     }
 }
 
@@ -493,7 +501,42 @@ body {
     }
 }
 
-#featured {}
+#contributors {
+    .card {
+        background-color: map-get($colors, dark_gray);
+        border-radius: 12px;
+        box-shadow: 4px 4px 4px map-get($colors, dark_gray_shadow);
+        height: 350px;
+        margin: 0 auto;
+        overflow: hidden;
+        position: relative;
+        width: 250px;
+
+        .heading {
+            background-color: map-get($colors, light_gray);
+            bottom: 0;
+            padding: 4px 16px;
+            position: absolute;
+            width: 100%;
+            color: map-get($colors, text);
+
+            p:not(:last-child) {
+                padding-bottom: 8px;
+            }
+
+            .social {
+                background: center no-repeat;
+                background-size: 100%;
+            }
+
+            .linkedin {
+                background-image: url(/assets/icon/linkedin.svg);
+                height: 24px;
+                width: 24px;
+            }
+        }
+    }
+}
 
 #resources {
     #resource-tiles {
@@ -512,52 +555,6 @@ body {
                 bottom: 8px;
                 padding: 0 16px;
                 position: absolute;
-            }
-        }
-    }
-}
-
-#contact-us {
-    > * {
-        padding: 0 78px;
-        
-        @include breakpoint(1115px) {
-            padding: 0 58px;
-        }
-        
-        @include breakpoint(808px) {
-            padding: 0 29px;
-        }
-        
-        @include breakpoint(500px) {
-            padding: 0 9px;
-        }
-    }
-
-    .contact-form {
-        form {
-            display: flex;
-            flex-direction: column;
-            max-width: 567px;
-            row-gap: 16px;
-
-            input, textarea {
-                background-color: map-get($colors, light_gray);
-                border: none;
-                border-radius: 12px;
-                font-size: .875em;
-                height: 48px;
-                max-width: 324px;
-                padding: 0 16px;
-            }
-
-            textarea {
-                font-family: 'Nunito Sans', sans-serif;
-                height: 120px;
-                padding: 16px;
-                max-width: 100%;
-                min-width: 100%;
-                resize: none;
             }
         }
     }
