@@ -138,6 +138,18 @@ body {
         }
     }
 
+    .copy {
+        padding: 0 24px;
+        
+        @include breakpoint(829px) {
+            padding: 0 12px;
+        }
+        
+        @include breakpoint(500px) {
+            padding: 0;
+        }
+    }
+
     .matrix {
         display: grid;
         gap: 32px 24px;
@@ -287,12 +299,6 @@ body {
             }
 
             .drawer {
-                &:hover {
-                    .dropdown {
-                        font-size: 0.875em;
-                    }
-                }
-
                 a.link:not(.title):hover {
                     background-color: map-get($colors, light_gray);
                 }
@@ -309,6 +315,7 @@ body {
                 a {
                     padding: 8px 24px;
                     width: 100%;
+                    font-size: .875em;
                 }
             }
 
@@ -482,6 +489,10 @@ body {
                         font-size: .875em;
                         padding: 2px 12px;
                     }
+
+                    &:hover {
+                        box-shadow: 2px 2px 2px map-get($colors, dark_gray_shadow);
+                    }
                 }
             }
 
@@ -515,7 +526,7 @@ body {
         .heading {
             background-color: map-get($colors, light_gray);
             bottom: 0;
-            padding: 4px 16px;
+            padding: 8px 16px;
             position: absolute;
             width: 100%;
             color: map-get($colors, text);
@@ -527,6 +538,12 @@ body {
             .social {
                 background: center no-repeat;
                 background-size: 100%;
+                transition: .125s linear;
+
+                &:hover {
+                    box-shadow: 2px 2px 2px map-get($colors, dark_gray_shadow);
+                    transform: scale(1.1);
+                }
             }
 
             .linkedin {
