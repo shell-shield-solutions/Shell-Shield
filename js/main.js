@@ -1,7 +1,7 @@
-const navOpen = document.querySelector('#nav-open')
-const navClose = document.querySelector('#nav-close')
-const mobileNav = document.querySelector('#mobile-nav')
-const mobileNavPanel = mobileNav.querySelector('.panel')
+const navOpen = document.querySelector('#nav-open'),
+    navClose = document.querySelector('#nav-close'),
+    mobileNav = document.querySelector('#mobile-nav'),
+    mobileNavPanel = mobileNav.querySelector('.panel')
 
 document.addEventListener('click', (event) => {
     if (event.target == navOpen) {
