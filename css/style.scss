@@ -362,10 +362,6 @@ body {
         border-radius: 12px;
         margin: 24px auto;
         max-width: 90%;
-
-        @include breakpoint(829px) {
-            // max-width: 80%;
-        }
     }
 }
 
