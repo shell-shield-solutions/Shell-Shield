@@ -452,6 +452,7 @@ body .social:hover {
   transition: 0.125s linear;
 }
 #article-tiles .tile .tag-list .tag a {
+  background-color: #262625;
   font-size: 0.875em;
   padding: 2px 12px;
 }
