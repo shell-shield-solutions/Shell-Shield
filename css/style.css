@@ -483,13 +483,13 @@ body .social:hover {
   margin-bottom: 32px;
 }
 #solutions details summary {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
   list-style-type: none;
   margin-bottom: 24px;
   padding-left: 32px;
   position: relative;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 #solutions details summary ::before {
   background: url(/Shell-Shield/assets/icon/list-closed.svg) center no-repeat;
@@ -499,6 +499,9 @@ body .social:hover {
   left: 0;
   position: absolute;
   width: 24px;
+}
+#solutions details summary:hover {
+  cursor: pointer;
 }
 #solutions details[open] summary ::before {
   background: url(/Shell-Shield/assets/icon/list-open.svg) center no-repeat;

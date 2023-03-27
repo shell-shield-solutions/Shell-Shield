@@ -598,11 +598,11 @@ body {
         margin-bottom: 32px;
 
         summary {
-            user-select: none;
             list-style-type: none;
             margin-bottom: 24px;
             padding-left: 32px;
             position: relative;
+            user-select: none;
 
             ::before {
                 background: url(/Shell-Shield/assets/icon/list-closed.svg)center no-repeat;
@@ -612,6 +612,10 @@ body {
                 left: 0;
                 position: absolute;
                 width: 24px;
+            }
+
+            &:hover {
+                cursor: pointer;
             }
         }
 
