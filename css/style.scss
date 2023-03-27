@@ -558,7 +558,7 @@ body {
                 transition: .125s linear;
                 
                 a {
-                    background-color: map-get($colors, text);
+                    color: map-get($colors, text);
                     font-size: .875em;
                     padding: 2px 12px;
                 }
