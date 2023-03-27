@@ -604,19 +604,19 @@ body {
             position: relative;
 
             ::before {
-                position: absolute;
-                content: '';
-                width: 24px;
-                height: 24px;
-                background: url(/assets/icon/list-closed.svg)center no-repeat;
+                background: url(/Shell-Shield/assets/icon/list-closed.svg)center no-repeat;
                 background-size: 16px;
+                content: '';
+                height: 24px;
                 left: 0;
+                position: absolute;
+                width: 24px;
             }
         }
 
         &[open] summary {
             ::before {
-                background: url(/assets/icon/list-open.svg)center no-repeat;
+                background: url(/Shell-Shield/assets/icon/list-open.svg)center no-repeat;
                 background-size: 16px;
                 top: 6px;
             }
