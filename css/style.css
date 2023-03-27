@@ -300,7 +300,7 @@ body .social:hover {
   flex-direction: column;
 }
 #hero .hero-bg {
-  background: url(/Shell-Shield/assets/img/hero-home.png) left center no-repeat;
+  background: url(/Shell-Shield/assets/img/hero-home.png) center no-repeat;
   height: 500px;
   margin-bottom: 48px;
 }
