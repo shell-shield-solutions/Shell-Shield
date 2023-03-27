@@ -440,8 +440,13 @@ body .matrix {
   box-shadow: 2px 2px 2px hsla(0, 0%, 65%, 0.5);
   transform: scale(1.1);
 }
+#contributors .card .heading ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
 #contributors .card .heading .linkedin {
-  background-image: url(/assets/icon/linkedin.svg);
+  background-image: url(/Shell-Shield/assets/icon/linkedin.svg);
   height: 24px;
   width: 24px;
 }
