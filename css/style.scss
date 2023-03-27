@@ -595,7 +595,7 @@ body {
     padding: 0 24px;
 
     details {
-        margin-bottom: 56px;
+        margin-bottom: 32px;
 
         summary {
             list-style-type: none;
@@ -625,6 +625,10 @@ body {
                 background-size: 16px;
                 top: 6px;
             }
+        }
+
+        #article-tiles {
+            margin-bottom: 32px;
         }
     }
 }
