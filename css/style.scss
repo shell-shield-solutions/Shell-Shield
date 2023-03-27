@@ -535,7 +535,7 @@ body {
     }
 }
 
-#article-tiles, .article-group {
+#article-tiles {
     .tile {
         img {
             background-color: map-get($colors, light_gray);
@@ -627,7 +627,7 @@ body {
             }
         }
 
-        .article-group {
+        #article-tiles {
             margin-bottom: 32px;
         }
     }
