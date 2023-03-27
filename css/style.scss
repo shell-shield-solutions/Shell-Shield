@@ -370,6 +370,7 @@ body {
     .hero-bg {
         background: url(/Shell-Shield/assets/img/hero-home.png) left center no-repeat;
         height: 500px;
+        margin-bottom: 48px;
 
         @include breakpoint(829px) {
             height: 250px;
