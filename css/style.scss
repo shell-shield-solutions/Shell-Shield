@@ -173,6 +173,24 @@ body {
             }
         }
     }
+
+    .social {
+        background: center no-repeat;
+        background-size: 100%;
+        display: block;
+        transition: .125s linear;
+
+        &.linkedin {
+            background-image: url(/assets/icon/linkedin.svg);
+            height: 24px;
+            width: 24px;
+        }
+
+        &:hover {
+            box-shadow: 2px 2px 2px map-get($colors, dark_gray_shadow);
+            transform: scale(1.1);
+        }
+    }
 }
 
 #mobile-nav {
@@ -243,7 +261,7 @@ body {
         max-width: calc(100vw - 48px);
         margin: 0 auto 48px;
 
-        p:not(:only-of-type, :last-of-type) {
+        .copy:not(:only-of-type, :last-of-type) {
             line-height: 1.5em;
             margin-bottom: 12px;
         }
@@ -369,6 +387,48 @@ body {
     margin: 0 auto;
     width: max(934px);
 
+    li, p:not(.title-section p) {
+        line-height: 1.75em;
+    }
+
+    .title-section {
+        margin-bottom: 24px;
+
+        .page-title {
+            font-size: 3em;
+        }
+
+        #credits {
+            align-items: center;
+            display: flex;
+            gap: 12px;
+            margin-top: 12px;
+    
+            a {
+                color: map-get($colors, text);
+                margin-bottom: 4px;
+            }
+    
+            .profile-pic {
+                background-color: gray;
+                width: 56px;
+                height: 56px;
+                border-radius: 100vmax;
+            }
+
+            .author {
+                display: inline-flex;
+                gap: 3px;
+
+                .social {
+                    height: 16px;
+                    margin: 3px 0 0 6px;
+                    width: 16px;
+                }
+            }
+        }
+    }
+
     .bold {
         font-weight: bold;
     }
@@ -381,32 +441,12 @@ body {
         }
     }
 
-    #credits {
-        display: flex;
-        align-items: center;
-
-        .profile-pic {
-            background-color: gray;
-            width: 56px;
-            height: 56px;
-            border-radius: 100vmax;
-        }
-    }
-
     .section {
         margin-bottom: 24px;
         
         .section-title {
             font-size: 1.5em;
-            margin-bottom: 4px;
-        }
-
-        p:not(:last-of-type) {
             margin-bottom: 6px;
-        }
-
-        li:not(:last-of-type) {
-            margin-bottom: 4px;
         }
     }
 }
@@ -531,27 +571,10 @@ body {
                 padding-bottom: 8px;
             }
 
-            .social {
-                background: center no-repeat;
-                background-size: 100%;
-                transition: .125s linear;
-
-                &:hover {
-                    box-shadow: 2px 2px 2px map-get($colors, dark_gray_shadow);
-                    transform: scale(1.1);
-                }
-            }
-
             ul {
                 display: flex;
                 flex-wrap: wrap;
                 gap: 8px;
-            }
-
-            .linkedin {
-                background-image: url(/Shell-Shield/assets/icon/linkedin.svg);
-                height: 24px;
-                width: 24px;
             }
         }
     }

@@ -136,6 +136,21 @@ body .matrix {
     height: 188px;
   }
 }
+body .social {
+  background: center no-repeat;
+  background-size: 100%;
+  display: block;
+  transition: 0.125s linear;
+}
+body .social.linkedin {
+  background-image: url(/assets/icon/linkedin.svg);
+  height: 24px;
+  width: 24px;
+}
+body .social:hover {
+  box-shadow: 2px 2px 2px hsla(0, 0%, 65%, 0.5);
+  transform: scale(1.1);
+}
 
 #mobile-nav {
   background-color: hsla(60, 1%, 15%, 0.33);
@@ -195,7 +210,7 @@ body .matrix {
   max-width: calc(100vw - 48px);
   margin: 0 auto 48px;
 }
-#site-wrapper #main > div:not(#hero) p:not(:only-of-type, :last-of-type) {
+#site-wrapper #main > div:not(#hero) .copy:not(:only-of-type, :last-of-type) {
   line-height: 1.5em;
   margin-bottom: 12px;
 }
@@ -303,6 +318,40 @@ body .matrix {
   margin: 0 auto;
   width: 934px;
 }
+#article li, #article p:not(.title-section p) {
+  line-height: 1.75em;
+}
+#article .title-section {
+  margin-bottom: 24px;
+}
+#article .title-section .page-title {
+  font-size: 3em;
+}
+#article .title-section #credits {
+  align-items: center;
+  display: flex;
+  gap: 12px;
+  margin-top: 12px;
+}
+#article .title-section #credits a {
+  color: #262625;
+  margin-bottom: 4px;
+}
+#article .title-section #credits .profile-pic {
+  background-color: gray;
+  width: 56px;
+  height: 56px;
+  border-radius: 100vmax;
+}
+#article .title-section #credits .author {
+  display: inline-flex;
+  gap: 3px;
+}
+#article .title-section #credits .author .social {
+  height: 16px;
+  margin: 3px 0 0 6px;
+  width: 16px;
+}
 #article .bold {
   font-weight: bold;
 }
@@ -312,28 +361,12 @@ body .matrix {
 #article ul li {
   list-style: disc;
 }
-#article #credits {
-  display: flex;
-  align-items: center;
-}
-#article #credits .profile-pic {
-  background-color: gray;
-  width: 56px;
-  height: 56px;
-  border-radius: 100vmax;
-}
 #article .section {
   margin-bottom: 24px;
 }
 #article .section .section-title {
   font-size: 1.5em;
-  margin-bottom: 4px;
-}
-#article .section p:not(:last-of-type) {
   margin-bottom: 6px;
-}
-#article .section li:not(:last-of-type) {
-  margin-bottom: 4px;
 }
 
 #focus .focus-cards {
@@ -432,24 +465,10 @@ body .matrix {
 #contributors .card .heading p:not(:last-child) {
   padding-bottom: 8px;
 }
-#contributors .card .heading .social {
-  background: center no-repeat;
-  background-size: 100%;
-  transition: 0.125s linear;
-}
-#contributors .card .heading .social:hover {
-  box-shadow: 2px 2px 2px hsla(0, 0%, 65%, 0.5);
-  transform: scale(1.1);
-}
 #contributors .card .heading ul {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-}
-#contributors .card .heading .linkedin {
-  background-image: url(/Shell-Shield/assets/icon/linkedin.svg);
-  height: 24px;
-  width: 24px;
 }
 
 #resources #resource-tiles .tile {
