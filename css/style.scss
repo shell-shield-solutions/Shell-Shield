@@ -390,6 +390,7 @@ body {
 
     li, p:not(.title-section p) {
         line-height: 1.75em;
+
     }
 
     .title-section {
@@ -444,11 +445,29 @@ body {
 
     .section {
         margin-bottom: 24px;
+
+        p:not(:last-child) {
+            margin-bottom: 6px;
+
+            &:only-of-type {
+                margin-bottom: 16px;
+            }
+        }
         
         .section-title {
             font-size: 1.5em;
             margin-bottom: 6px;
         }
+
+        .subtitle {
+            font-size: 1.25em;
+            margin-bottom: 6px;
+        }
+    }
+
+    .subsection {
+        margin-bottom: 12px;
+        padding: 0 20px;
     }
 }
 
@@ -504,6 +523,7 @@ body {
     #article-tiles {
         .tile {
             img {
+                background-color: map-get($colors, light_gray);
                 border-radius: 12px;
                 height: 188px;
                 display: block;

@@ -365,9 +365,23 @@ body .social:hover {
 #article .section {
   margin-bottom: 24px;
 }
+#article .section p:not(:last-child) {
+  margin-bottom: 6px;
+}
+#article .section p:not(:last-child):only-of-type {
+  margin-bottom: 16px;
+}
 #article .section .section-title {
   font-size: 1.5em;
   margin-bottom: 6px;
+}
+#article .section .subtitle {
+  font-size: 1.25em;
+  margin-bottom: 6px;
+}
+#article .subsection {
+  margin-bottom: 12px;
+  padding: 0 20px;
 }
 
 #focus .focus-cards {
@@ -410,6 +424,7 @@ body .social:hover {
 }
 
 #insights #article-tiles .tile img {
+  background-color: #F2F2F2;
   border-radius: 12px;
   height: 188px;
   display: block;
