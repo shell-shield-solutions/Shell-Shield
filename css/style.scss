@@ -388,9 +388,16 @@ body {
     margin: 0 auto;
     width: max(934px);
 
+    ol {
+        li {
+            list-style-type: decimal;
+        }
+
+        padding-left: 40px;
+    }
+
     li, p:not(.title-section p) {
         line-height: 1.75em;
-
     }
 
     .title-section {
@@ -447,11 +454,15 @@ body {
         margin-bottom: 24px;
 
         p:not(:last-child) {
-            margin-bottom: 6px;
+            margin-bottom: 12px;
 
             &:only-of-type {
                 margin-bottom: 16px;
             }
+        }
+
+        li:not(:last-of-type) {
+            margin-bottom: 6px;
         }
         
         .section-title {
@@ -462,6 +473,11 @@ body {
         .subtitle {
             font-size: 1.25em;
             margin-bottom: 6px;
+
+            &:not(:first-of-type) {
+                // background-color: red;
+                // margin-top: 12px;
+            }
         }
     }
 

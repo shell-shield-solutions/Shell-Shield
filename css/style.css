@@ -319,6 +319,12 @@ body .social:hover {
   margin: 0 auto;
   width: 934px;
 }
+#article ol {
+  padding-left: 40px;
+}
+#article ol li {
+  list-style-type: decimal;
+}
 #article li, #article p:not(.title-section p) {
   line-height: 1.75em;
 }
@@ -366,10 +372,13 @@ body .social:hover {
   margin-bottom: 24px;
 }
 #article .section p:not(:last-child) {
-  margin-bottom: 6px;
+  margin-bottom: 12px;
 }
 #article .section p:not(:last-child):only-of-type {
   margin-bottom: 16px;
+}
+#article .section li:not(:last-of-type) {
+  margin-bottom: 6px;
 }
 #article .section .section-title {
   font-size: 1.5em;
