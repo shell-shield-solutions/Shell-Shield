@@ -26,6 +26,10 @@ $colors: (
     list-style-type: none;
     margin: 0;
     padding: 0;
+
+    :focus {
+        outline: none;
+    }
 }
 
 body {
@@ -35,6 +39,10 @@ body {
 
     a, span, h1, h2, h3 {
         display: inline-block;
+    }
+
+    h2 {
+        font-size: 1.5em;
     }
 
     h3 {
@@ -157,6 +165,11 @@ body {
         justify-content: space-around;
         padding: 0 24px;
 
+        img {
+            box-shadow: 4px 4px 4px map-get($colors, dark_gray_shadow);
+            margin-bottom: 12px;
+        }
+
         @include breakpoint(767px) {
             grid-template-columns: repeat(auto-fill, 324px); 
 
@@ -270,6 +283,12 @@ body {
             margin-bottom: 96px;
         }
     }
+
+    &.about {
+        .copy {
+            text-align: center;
+        }
+    }
 }
 
 #header {
@@ -369,6 +388,7 @@ body {
 
     .hero-bg {
         background: url(/Shell-Shield/assets/img/hero-home.png) center no-repeat;
+        background-size: cover;
         height: 500px;
         margin-bottom: 48px;
 
@@ -535,7 +555,7 @@ body {
     }
 }
 
-#article-tiles {
+.article-tiles {
     .tile {
         img {
             background-color: map-get($colors, light_gray);
@@ -592,7 +612,15 @@ body {
 }
 
 #solutions {
-    padding: 0 24px;
+    > div:not(.title-band) {
+        > h3 {
+            margin-bottom: 8px;
+        }
+
+        > p {
+            margin-bottom: 12px;
+        }
+    }
 
     details {
         margin-bottom: 32px;
@@ -614,6 +642,10 @@ body {
                 width: 24px;
             }
 
+            &::-webkit-details-marker {
+                display:none;
+            }
+
             &:hover {
                 cursor: pointer;
             }
@@ -621,15 +653,15 @@ body {
 
         &[open] summary {
             ::before {
-                background: url(/Shell-Shield/assets/icon/list-open.svg)center no-repeat;
+                background: url(/Shell-Shield/assets/icon/list-open.svg) center no-repeat;
                 background-size: 16px;
                 top: 6px;
             }
         }
+    }
 
-        #article-tiles {
-            margin-bottom: 32px;
-        }
+    .article-tiles {
+        padding-bottom: 32px;
     }
 }
 
