@@ -333,15 +333,6 @@ body .social:hover {
   margin: 0 auto;
   width: 934px;
 }
-#article ol {
-  padding-left: 40px;
-}
-#article ol li {
-  list-style-type: decimal;
-}
-#article li, #article p:not(.title-section p) {
-  line-height: 1.75em;
-}
 #article .title-section {
   margin-bottom: 24px;
 }
@@ -376,12 +367,6 @@ body .social:hover {
 #article .bold {
   font-weight: bold;
 }
-#article ul {
-  padding-left: 40px;
-}
-#article ul li {
-  list-style: disc;
-}
 #article .section {
   margin-bottom: 24px;
 }
@@ -391,8 +376,24 @@ body .social:hover {
 #article .section p:not(:last-child):only-of-type {
   margin-bottom: 16px;
 }
-#article .section li:not(:last-of-type) {
+#article .section p:not(.title-section p) {
+  line-height: 1.75em;
+}
+#article .section > ul, #article .section ol {
+  line-height: 1.75em;
+  padding-left: 40px;
+}
+#article .section > ul li, #article .section ol li {
+  list-style: disc;
+}
+#article .section > ul li:not(:last-of-type), #article .section ol li:not(:last-of-type) {
   margin-bottom: 6px;
+}
+#article .section ol li {
+  list-style-type: decimal;
+}
+#article .section ol:not(:last-child) {
+  margin-bottom: 12px;
 }
 #article .section .section-title {
   font-size: 1.5em;
@@ -403,8 +404,28 @@ body .social:hover {
   margin-bottom: 6px;
 }
 #article .subsection {
-  margin-bottom: 12px;
+  margin-bottom: 48px;
   padding: 0 20px;
+}
+#article .subsection h4 {
+  margin-bottom: 12px;
+}
+#article table {
+  border-spacing: 0px;
+  color: #262625;
+  overflow-x: scroll;
+  display: block;
+}
+#article table .titles td {
+  background-color: #D9D9D8;
+  font-weight: bold;
+}
+#article table td {
+  background-color: #F2F2F2;
+  padding: 4px 8px;
+  vertical-align: top;
+  white-space: nowrap;
+  width: 324px;
 }
 
 #focus .focus-cards {
@@ -449,8 +470,8 @@ body .social:hover {
 .article-tiles .tile img {
   background-color: #F2F2F2;
   border-radius: 12px;
-  height: 188px;
   display: block;
+  height: 188px;
 }
 .article-tiles .tile .tag-list {
   display: inline-flex;
@@ -479,6 +500,9 @@ body .social:hover {
 .article-tiles .tile p {
   font-size: 0.875em;
   margin-bottom: 6px;
+}
+.article-tiles .tile a {
+  color: #262625;
 }
 
 #insights .more {

@@ -408,18 +408,6 @@ body {
     margin: 0 auto;
     width: max(934px);
 
-    ol {
-        li {
-            list-style-type: decimal;
-        }
-
-        padding-left: 40px;
-    }
-
-    li, p:not(.title-section p) {
-        line-height: 1.75em;
-    }
-
     .title-section {
         margin-bottom: 24px;
 
@@ -462,14 +450,6 @@ body {
         font-weight: bold;
     }
 
-    ul  {
-        padding-left: 40px;
-
-        li {
-            list-style: disc;
-        }
-    }
-
     .section {
         margin-bottom: 24px;
 
@@ -481,8 +461,31 @@ body {
             }
         }
 
-        li:not(:last-of-type) {
-            margin-bottom: 6px;
+        p:not(.title-section p) {
+            line-height: 1.75em;
+        }
+
+        > ul, ol  {
+            line-height: 1.75em;
+            padding-left: 40px;
+    
+            li {
+                list-style: disc;
+
+                &:not(:last-of-type) {
+                    margin-bottom: 6px;
+                }
+            }
+        }
+
+        ol {
+            li {
+                list-style-type: decimal;
+            }
+    
+            &:not(:last-child) {
+                margin-bottom: 12px;
+            }
         }
         
         .section-title {
@@ -502,8 +505,32 @@ body {
     }
 
     .subsection {
-        margin-bottom: 12px;
+        margin-bottom: 48px;
         padding: 0 20px;
+
+        h4 {
+            margin-bottom: 12px;
+        }
+    }
+
+    table {
+        border-spacing: 0px;
+        color: map-get($colors, text);
+        overflow-x: scroll;
+        display: block;
+
+        .titles td {
+            background-color: map-get($colors, med_gray);
+            font-weight: bold;
+        }
+
+        td {
+            background-color: map-get($colors, light_gray);
+            padding: 4px 8px;
+            vertical-align: top;
+            white-space: nowrap;
+            width: 324px;
+        }
     }
 }
 
@@ -560,8 +587,8 @@ body {
         img {
             background-color: map-get($colors, light_gray);
             border-radius: 12px;
-            height: 188px;
             display: block;
+            height: 188px;
         }
 
         .tag-list {
@@ -596,6 +623,10 @@ body {
         p {
             font-size: .875em;
             margin-bottom: 6px;
+        }
+
+        a {
+            color: map-get($colors, text)
         }
     }
 }
