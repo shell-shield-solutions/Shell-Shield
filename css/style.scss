@@ -472,9 +472,17 @@ body {
             li {
                 list-style: disc;
 
+                &.subpoint {
+                    margin-left: 24px;
+                }
+
                 &:not(:last-of-type) {
                     margin-bottom: 6px;
                 }
+            }
+
+            &:not(:last-child) {
+                margin-bottom: 18px;
             }
         }
 

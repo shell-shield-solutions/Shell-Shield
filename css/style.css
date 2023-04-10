@@ -386,8 +386,14 @@ body .social:hover {
 #article .section > ul li, #article .section ol li {
   list-style: disc;
 }
+#article .section > ul li.subpoint, #article .section ol li.subpoint {
+  margin-left: 24px;
+}
 #article .section > ul li:not(:last-of-type), #article .section ol li:not(:last-of-type) {
   margin-bottom: 6px;
+}
+#article .section > ul:not(:last-child), #article .section ol:not(:last-child) {
+  margin-bottom: 18px;
 }
 #article .section ol li {
   list-style-type: decimal;
