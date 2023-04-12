@@ -53,10 +53,6 @@ body {
         text-decoration: none;
         transition: .125s linear;
 
-        &.link:hover {
-            text-decoration: underline;
-        }
-
         &.arrow {
             background: url(/Shell-Shield/assets/icon/right-arrow.svg) right center no-repeat;
             background-size: 12px;
@@ -67,6 +63,11 @@ body {
                 padding-right: 20px;
             }
         }
+    }
+
+    .link:hover {
+        cursor: pointer;
+        text-decoration: underline;
     }
 
     .btn {
@@ -330,9 +331,12 @@ body {
                     margin-left: 12px;
                 }
 
+            .link {
+                padding: 18px 24px;
+            }
+
             a:not(.btn) {
                 color: map-get($colors, text);
-                padding: 18px 24px;
             }
 
             .drawer {

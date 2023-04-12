@@ -28,9 +28,6 @@ body a {
   text-decoration: none;
   transition: 0.125s linear;
 }
-body a.link:hover {
-  text-decoration: underline;
-}
 body a.arrow {
   background: url(/Shell-Shield/assets/icon/right-arrow.svg) right center no-repeat;
   background-size: 12px;
@@ -39,6 +36,10 @@ body a.arrow {
 }
 body a.arrow:hover {
   padding-right: 20px;
+}
+body .link:hover {
+  cursor: pointer;
+  text-decoration: underline;
 }
 body .btn {
   border: none;
@@ -264,9 +265,11 @@ body .social:hover {
 #header .nav-block #navigation > :last-child {
   margin-left: 12px;
 }
+#header .nav-block #navigation .link {
+  padding: 18px 24px;
+}
 #header .nav-block #navigation a:not(.btn) {
   color: #262625;
-  padding: 18px 24px;
 }
 #header .nav-block #navigation .drawer a.link:not(.title):hover {
   background-color: #F2F2F2;
