@@ -623,6 +623,8 @@ body .social:hover {
   font-size: 0.875em;
   font-weight: 600;
   padding-bottom: 6px;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 #footer #breadcrumbs a, #footer #breadcrumbs p:not(.title) {
   color: #262625;
