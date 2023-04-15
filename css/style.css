@@ -436,6 +436,25 @@ body .social:hover {
   white-space: nowrap;
   width: 324px;
 }
+#article .video {
+  border-radius: 12px;
+  box-shadow: 4px 4px 4px hsla(0, 0%, 65%, 0.5);
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+#article .video::after {
+  content: "";
+  display: block;
+  padding-top: 56.25%;
+}
+#article .video iframe {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
 
 #focus .focus-cards {
   display: flex;

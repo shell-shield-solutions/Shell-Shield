@@ -544,6 +544,28 @@ body {
             width: 324px;
         }
     }
+
+    .video {
+        border-radius: 12px;
+        box-shadow: 4px 4px 4px map-get($colors, dark_gray_shadow);
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+      }
+      
+      .video::after {
+        content: "";
+        display: block;
+        padding-top: 56.25%;
+      }
+      
+      .video iframe {
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+      }
 }
 
 #focus {
