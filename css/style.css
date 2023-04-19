@@ -370,53 +370,53 @@ body .social:hover {
 #article .bold {
   font-weight: bold;
 }
-#article .section {
+#article .section, #article .subsection {
   margin-bottom: 24px;
 }
-#article .section p:not(:last-child) {
+#article .section p:not(:last-child), #article .subsection p:not(:last-child) {
   margin-bottom: 12px;
 }
-#article .section p:not(:last-child):only-of-type {
+#article .section p:not(:last-child):only-of-type, #article .subsection p:not(:last-child):only-of-type {
   margin-bottom: 16px;
 }
-#article .section p:not(.title-section p) {
+#article .section p:not(.title-section p), #article .subsection p:not(.title-section p) {
   line-height: 1.75em;
 }
-#article .section > ul, #article .section ol {
+#article .section > ul, #article .section ol, #article .subsection > ul, #article .subsection ol {
   line-height: 1.75em;
   padding-left: 40px;
 }
-#article .section > ul li, #article .section ol li {
+#article .section > ul li, #article .section ol li, #article .subsection > ul li, #article .subsection ol li {
   list-style: disc;
 }
-#article .section > ul li.subpoint, #article .section ol li.subpoint {
+#article .section > ul li.subpoint, #article .section ol li.subpoint, #article .subsection > ul li.subpoint, #article .subsection ol li.subpoint {
   margin-left: 24px;
 }
-#article .section > ul li:not(:last-of-type), #article .section ol li:not(:last-of-type) {
+#article .section > ul li:not(:last-of-type), #article .section ol li:not(:last-of-type), #article .subsection > ul li:not(:last-of-type), #article .subsection ol li:not(:last-of-type) {
   margin-bottom: 6px;
 }
-#article .section > ul:not(:last-child), #article .section ol:not(:last-child) {
+#article .section > ul:not(:last-child), #article .section ol:not(:last-child), #article .subsection > ul:not(:last-child), #article .subsection ol:not(:last-child) {
   margin-bottom: 18px;
 }
-#article .section ol li {
+#article .section ol li, #article .subsection ol li {
   list-style-type: decimal;
 }
-#article .section ol:not(:last-child) {
+#article .section ol:not(:last-child), #article .subsection ol:not(:last-child) {
   margin-bottom: 12px;
 }
-#article .section .section-title {
+#article .section .section-title, #article .subsection .section-title {
   font-size: 1.5em;
   margin-bottom: 12px;
 }
-#article .section .subtitle {
+#article .section .subtitle, #article .subsection .subtitle {
   font-size: 1.25em;
   margin-bottom: 6px;
 }
-#article .subsection {
+#article .section .subsection, #article .subsection .subsection {
   margin-bottom: 48px;
   padding: 0 20px;
 }
-#article .subsection h4 {
+#article .section .subsection h4, #article .subsection .subsection h4 {
   margin-bottom: 12px;
 }
 #article table {

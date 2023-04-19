@@ -454,7 +454,7 @@ body {
         font-weight: bold;
     }
 
-    .section {
+    .section, .subsection {
         margin-bottom: 24px;
 
         p:not(:last-child) {
@@ -514,14 +514,14 @@ body {
                 // margin-top: 12px;
             }
         }
-    }
-
-    .subsection {
-        margin-bottom: 48px;
-        padding: 0 20px;
-
-        h4 {
-            margin-bottom: 12px;
+        
+        .subsection {
+            margin-bottom: 48px;
+            padding: 0 20px;
+    
+            h4 {
+                margin-bottom: 12px;
+            }
         }
     }
 
