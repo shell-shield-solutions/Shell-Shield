@@ -205,6 +205,42 @@ body {
             transform: scale(1.1);
         }
     }
+
+    #contributor-cards {
+        .card {
+            background-position: top center;
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+        
+        #brandon {
+            background-image: url(/Shell-Shield/assets/img/Brandon.jpg);
+        }
+        
+        #alexa {
+            background-image: url(/Shell-Shield/assets/img/Alexa.jpg);
+        }
+    
+        #yared {
+            background-image: url(/Shell-Shield/assets/img/Yared.jpg);
+            background-position: -30px 0;
+            background-size: 120%;
+        }
+
+        #colin {
+            background-image: url(/Shell-Shield/assets/img/Colin.jpg);
+            background-position: 0 -20px;
+        }
+
+        #austin {
+            background-image: url(/Shell-Shield/assets/img/Austin.png);
+            background-size: 120%;
+        }
+
+        #tate {
+            background-image: url(/Shell-Shield/assets/img/Tate.png);
+        }
+    }
 }
 
 #mobile-nav {
@@ -432,9 +468,32 @@ body {
     
             .profile-pic {
                 background-color: gray;
+                background-position: top center;
+                background-repeat: no-repeat;
+                background-size: 100%;
                 width: 56px;
                 height: 56px;
                 border-radius: 100vmax;
+
+                &.alexa {
+                    background-image: url(/Shell-Shield/assets/img/Alexa.jpg);
+                    background-position: -5px 0px;
+                    background-size: 120%;
+                }
+
+                &.yared {
+                    background-image: url(/Shell-Shield/assets/img/Yared.jpg);
+                    background-position: -7px 0;
+                    background-size: 120%;
+                }
+                
+                &.austin {
+                    background-image: url(/Shell-Shield/assets/img/Austin.png);
+                }
+                
+                &.colin {
+                    background-image: url(/Shell-Shield/assets/img/Colin.jpg);
+                }
             }
 
             .author {

@@ -162,6 +162,33 @@ body .social:hover {
   box-shadow: 2px 2px 2px hsla(0, 0%, 65%, 0.5);
   transform: scale(1.1);
 }
+body #contributor-cards .card {
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+body #contributor-cards #brandon {
+  background-image: url(/Shell-Shield/assets/img/Brandon.jpg);
+}
+body #contributor-cards #alexa {
+  background-image: url(/Shell-Shield/assets/img/Alexa.jpg);
+}
+body #contributor-cards #yared {
+  background-image: url(/Shell-Shield/assets/img/Yared.jpg);
+  background-position: -30px 0;
+  background-size: 120%;
+}
+body #contributor-cards #colin {
+  background-image: url(/Shell-Shield/assets/img/Colin.jpg);
+  background-position: 0 -20px;
+}
+body #contributor-cards #austin {
+  background-image: url(/Shell-Shield/assets/img/Austin.png);
+  background-size: 120%;
+}
+body #contributor-cards #tate {
+  background-image: url(/Shell-Shield/assets/img/Tate.png);
+}
 
 #mobile-nav {
   background-color: hsla(60, 1%, 15%, 0.33);
@@ -354,9 +381,28 @@ body .social:hover {
 }
 #article .title-section #credits .profile-pic {
   background-color: gray;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 100%;
   width: 56px;
   height: 56px;
   border-radius: 100vmax;
+}
+#article .title-section #credits .profile-pic.alexa {
+  background-image: url(/Shell-Shield/assets/img/Alexa.jpg);
+  background-position: -5px 0px;
+  background-size: 120%;
+}
+#article .title-section #credits .profile-pic.yared {
+  background-image: url(/Shell-Shield/assets/img/Yared.jpg);
+  background-position: -7px 0;
+  background-size: 120%;
+}
+#article .title-section #credits .profile-pic.austin {
+  background-image: url(/Shell-Shield/assets/img/Austin.png);
+}
+#article .title-section #credits .profile-pic.colin {
+  background-image: url(/Shell-Shield/assets/img/Colin.jpg);
 }
 #article .title-section #credits .author {
   display: inline-flex;
