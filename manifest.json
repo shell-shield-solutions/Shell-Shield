@@ -1,0 +1,8 @@
+{
+  "short_name": "ror2-loadout-builder",
+  "name": "Risk of Rain 2 Loadout Builder",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
